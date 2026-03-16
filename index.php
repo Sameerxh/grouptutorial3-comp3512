@@ -55,5 +55,6 @@ $images = $result->fetchAll(PDO::FETCH_ASSOC);
 </div>
 </body>
 </html>
-<?php$db = null;
+<?php
+$db = null;
 ?>
