@@ -13,7 +13,7 @@ $countries = $result->fetchAll(PDO::FETCH_ASSOC);
 if (isset($_GET['country']) && $_GET['country'] != 'all') {
     // get images for country selected
     $selectedCountry = $_GET['country'];
-    $sql = "SELECT * FROM ImageDetails WHERE CountryCode = 'selectedCountry'";
+    $sql = "SELECT * FROM ImageDetails WHERE CountryCode = '$selectedCountry'";
 
 } else {
     // get all images
@@ -47,7 +47,7 @@ $images = $result->fetchAll(PDO::FETCH_ASSOC);
 <div>
     <?php foreach ($images as $image) { ?>
         <figure>
-            <img src="data2/images/<?php echo $image['FileName']; ?>" width="200">
+            <img src="data-2/images/<?php echo $image['FileName']; ?>" width="200">
             <figcaption><?php echo $image['Title']; ?></figcaption>
         </figure>
 
