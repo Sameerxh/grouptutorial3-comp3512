@@ -42,3 +42,18 @@ $images = $result->fetchAll(PDO::FETCH_ASSOC);
         </select>
         <button type="submit">Filter</button>
 </form>
+
+
+<div>
+    <?php foreach ($images as $image) { ?>
+        <figure>
+            <img src="data/images/<?php echo $image['FileName']; ?>" width="200">
+            <figcaption><?php echo $image['Title']; ?></figcaption>
+        </figure>
+
+<?php } ?>
+</div>
+</body>
+</html>
+<?php$db = null;
+?>
