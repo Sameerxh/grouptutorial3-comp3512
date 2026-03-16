@@ -47,7 +47,7 @@ $images = $result->fetchAll(PDO::FETCH_ASSOC);
 <div>
     <?php foreach ($images as $image) { ?>
         <figure>
-            <img src="data/images/<?php echo $image['FileName']; ?>" width="200">
+            <img src="data2/images/<?php echo $image['FileName']; ?>" width="200">
             <figcaption><?php echo $image['Title']; ?></figcaption>
         </figure>
 
