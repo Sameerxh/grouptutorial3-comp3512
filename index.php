@@ -1,6 +1,6 @@
 <?php
 //link to database 
-$db = new PDO("sqlite:data/travel.db");
+$db = new PDO("<sqlite:data2>/travel.db");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Get countries from dropdown
@@ -47,7 +47,7 @@ $images = $result->fetchAll(PDO::FETCH_ASSOC);
 <div>
     <?php foreach ($images as $image) { ?>
         <figure>
-            <img src="data-2/images/<?php echo $image['FileName']; ?>" width="200">
+            <img src="data2/images/<?php echo $image['FileName']; ?>" width="200">
             <figcaption><?php echo $image['Title']; ?></figcaption>
         </figure>
 
