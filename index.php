@@ -1,6 +1,6 @@
 <?php
 //link to database 
-$db = new PDO("sqlite:data>/travel.db");
+$db = new PDO("sqlite:data/travel.db");
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Get countries from dropdown
